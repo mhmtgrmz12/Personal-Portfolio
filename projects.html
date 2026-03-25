@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | Projects</title>
+    <meta name="description" content="Projects and achievements with expandable detail sections." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="panel">
+        <h1>Projects & Achievements</h1>
+        <p>Click any project tile to open details on the same page.</p>
+      </section>
+
+      <section class="projects-grid" aria-label="Project showcase">
+        <button class="project-tile" data-target="detail-sem2">
+          <span class="tile-kicker">Top Project</span>
+          <h2>Project Semester 2 SKIL2</h2>
+          <p>Security-focused implementation with stronger technical depth.</p>
+        </button>
+
+        <button class="project-tile" data-target="detail-sem1">
+          <span class="tile-kicker">Core Project</span>
+          <h2>Project Semester 1 SKIL2</h2>
+          <p>Foundational development project with practical outcomes.</p>
+        </button>
+
+        <button class="project-tile" data-target="detail-add1">
+          <span class="tile-kicker">Additional</span>
+          <h2>Additional Project 1</h2>
+          <p>A supplementary project demonstrating flexibility and initiative.</p>
+        </button>
+
+        <button class="project-tile" data-target="detail-add2">
+          <span class="tile-kicker">Additional</span>
+          <h2>Additional Project 2</h2>
+          <p>Extended work that highlights technical growth and consistency.</p>
+        </button>
+      </section>
+
+      <section id="project-details" class="detail-host" aria-live="polite">
+        <article class="project-detail" id="detail-sem2" hidden>
+          <div class="detail-head">
+            <h3>Project Semester 2 SKIL2</h3>
+            <button class="close-btn" type="button" data-close-details>Close</button>
+          </div>
+          <p><strong>Context:</strong> ECTS subject: Skills Integration 2. Built a secure web-based solution to apply cloud and cyber security concepts to a realistic case.</p>
+          <p><strong>Realisations:</strong> Implemented the full front-end workflow, produced technical documentation in PDF format, and integrated validation and structured navigation for better user experience.</p>
+          <div class="detail-media">
+            <img src="assets/images/project-placeholder-1.svg" alt="Project visual placeholder" />
+            <div class="embed-placeholder">
+              <p>Embed area for demo video, live URL, or PDF report.</p>
+            </div>
+          </div>
+          <p><strong>Learnings:</strong> Hard skills: HTML, CSS Grid, JavaScript DOM logic, secure form handling. Soft skills: planning, communication, iterative problem solving.</p>
+          <p><strong>My role / What I did:</strong> I designed the interface, implemented interactivity, prepared documentation, and coordinated delivery quality in the team workflow.</p>
+        </article>
+
+        <article class="project-detail" id="detail-sem1" hidden>
+          <div class="detail-head">
+            <h3>Project Semester 1 SKIL2</h3>
+            <button class="close-btn" type="button" data-close-details>Close</button>
+          </div>
+          <p><strong>Context:</strong> ECTS subject: Skills Integration 2. Created a portfolio-oriented project to showcase technical basics and structured presentation.</p>
+          <p><strong>Realisations:</strong> Developed multi-page structure, reusable components, and responsive layout behavior across desktop and mobile screens.</p>
+          <div class="detail-media">
+            <img src="assets/images/project-placeholder-2.svg" alt="Project visual placeholder" />
+            <div class="embed-placeholder">
+              <p>Embed area for HTML preview, PDF file, or media proof.</p>
+            </div>
+          </div>
+          <p><strong>Learnings:</strong> Hard skills: semantic HTML, responsive CSS, JavaScript event handling. Soft skills: ownership, feedback adaptation, and deadline management.</p>
+          <p><strong>My role / What I did:</strong> I implemented the navigation system, designed the visual structure, and delivered the final integration and testing.</p>
+        </article>
+
+        <article class="project-detail" id="detail-add1" hidden>
+          <div class="detail-head">
+            <h3>Additional Project 1</h3>
+            <button class="close-btn" type="button" data-close-details>Close</button>
+          </div>
+          <p><strong>Context:</strong> Built as an extra initiative to strengthen applied development practice.</p>
+          <p><strong>Realisations:</strong> Created a complete project flow with reusable UI components and a clear documentation package.</p>
+          <div class="detail-media">
+            <img src="assets/images/project-placeholder-3.svg" alt="Project visual placeholder" />
+            <div class="embed-placeholder">
+              <p>Embed area for project URL or showcase media.</p>
+            </div>
+          </div>
+          <p><strong>Learnings:</strong> Hard skills: layout systems, debugging, code organization. Soft skills: initiative, communication, and structure.</p>
+          <p><strong>My role / What I did:</strong> I owned front-end implementation and coordinated proof materials for presentation.</p>
+        </article>
+
+        <article class="project-detail" id="detail-add2" hidden>
+          <div class="detail-head">
+            <h3>Additional Project 2</h3>
+            <button class="close-btn" type="button" data-close-details>Close</button>
+          </div>
+          <p><strong>Context:</strong> Follow-up build to reinforce technical consistency and design quality.</p>
+          <p><strong>Realisations:</strong> Delivered a responsive interface, clearer content hierarchy, and improved interaction behavior.</p>
+          <div class="detail-media">
+            <img src="assets/images/project-placeholder-4.svg" alt="Project visual placeholder" />
+            <div class="embed-placeholder">
+              <p>Embed area for PDF evidence, video, or hosted demo.</p>
+            </div>
+          </div>
+          <p><strong>Learnings:</strong> Hard skills: accessibility basics, responsive tuning, content structure. Soft skills: reflection, reliability, and collaboration.</p>
+          <p><strong>My role / What I did:</strong> I led the UI implementation and final quality checks before delivery.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

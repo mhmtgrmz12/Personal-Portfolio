@@ -3,47 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mehmet | Portfolio</title>
+    <title>Mehmet | Home</title>
     <meta
       name="description"
-      content="Mehmet's personal portfolio page. Projects, skills, and contact details."
+      content="Welcome to Mehmet's portfolio. Applied Computer Science student at Thomas More Geel."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <div class="bg-shape bg-shape-1"></div>
-    <div class="bg-shape bg-shape-2"></div>
+  <body data-page="home">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main class="container">
-      <header class="hero">
-        <p class="tag">Personal Portfolio</p>
-        <h1>Hello, I'm Mehmet.</h1>
-        <p class="subtitle">
-          I build software and enjoy turning simple ideas into powerful experiences.
-        </p>
-        <a class="cta" href="#projects">View Projects</a>
-      </header>
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Welcome to my portfolio.</p>
+          <h1>Hi, I am Mehmet.</h1>
+          <p>
+            I am a student at Thomas More Geel in Applied Computer Science, with a focus on
+            Cloud and Cyber Security.
+          </p>
+          <a class="btn" href="projects.html">Discover My Projects</a>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/hero-cover.svg" alt="Professional hero cover image placeholder" />
+        </div>
+      </section>
 
-      <section id="projects" class="card-grid">
-        <article class="card">
-          <h2>Project 01</h2>
-          <p>A short project description will be added here.</p>
+      <section class="quick-info container">
+        <article class="panel">
+          <h2>What You Can Find Here</h2>
+          <p>
+            This portfolio presents my background, selected projects, practical skills, and
+            professional growth as a future cloud and cyber security specialist.
+          </p>
         </article>
-        <article class="card">
-          <h2>Project 02</h2>
-          <p>A short project description will be added here.</p>
-        </article>
-        <article class="card">
-          <h2>Project 03</h2>
-          <p>A short project description will be added here.</p>
+        <article class="panel">
+          <h2>Current Focus</h2>
+          <p>
+            I am improving my foundations in secure software development, networking, and cloud
+            infrastructure while building reliable, user-friendly solutions.
+          </p>
         </article>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

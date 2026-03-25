@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | CV</title>
+    <meta name="description" content="Mehmet's CV page with embedded PDF and download link." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="cv">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="panel">
+        <h1>Curriculum Vitae</h1>
+        <p>Preview my CV below or download the PDF directly.</p>
+        <a class="btn" href="assets/docs/CV_firstname_lastname.pdf" download>Download CV</a>
+      </section>
+
+      <section class="cv-frame-wrap">
+        <object
+          class="cv-frame"
+          data="assets/docs/CV_firstname_lastname.pdf"
+          type="application/pdf"
+          aria-label="Embedded CV PDF"
+        >
+          <p>
+            Your browser cannot display this PDF directly.
+            <a href="assets/docs/CV_firstname_lastname.pdf">Open the CV</a>.
+          </p>
+        </object>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

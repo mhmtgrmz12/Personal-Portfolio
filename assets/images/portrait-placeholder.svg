@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait Placeholder</title>
+  <desc id="desc">A placeholder portrait for the about page.</desc>
+  <rect width="720" height="900" fill="#e9f0ee"/>
+  <circle cx="360" cy="300" r="120" fill="#9cbcb7"/>
+  <rect x="210" y="460" width="300" height="260" rx="130" fill="#9cbcb7"/>
+  <text x="360" y="820" text-anchor="middle" font-size="34" font-family="Segoe UI, Arial, sans-serif" fill="#385357">
+    Portrait Placeholder
+  </text>
+</svg>

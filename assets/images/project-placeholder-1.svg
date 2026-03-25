@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#dbe9e6"/>
+  <rect x="70" y="80" width="820" height="400" rx="20" fill="#ffffff"/>
+  <text x="480" y="290" text-anchor="middle" font-size="38" font-family="Segoe UI, Arial, sans-serif" fill="#2f4d4f">
+    Project Visual 1
+  </text>
+</svg>

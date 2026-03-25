@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Professional Hero Cover Placeholder</title>
+  <desc id="desc">A modern abstract cover image placeholder for a portfolio homepage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c776d"/>
+      <stop offset="100%" stop-color="#e47a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="260" cy="180" r="140" fill="#ffffff22"/>
+  <circle cx="960" cy="560" r="170" fill="#ffffff26"/>
+  <rect x="170" y="310" width="860" height="240" rx="24" fill="#ffffff22"/>
+  <text x="200" y="420" font-size="58" font-family="Segoe UI, Arial, sans-serif" fill="#fff">
+    Professional Portfolio Cover
+  </text>
+  <text x="200" y="488" font-size="30" font-family="Segoe UI, Arial, sans-serif" fill="#fff">
+    Replace with your final hero image
+  </text>
+</svg>
