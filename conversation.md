@@ -24,3 +24,39 @@ Global and page-specific requirements for a multi-page portfolio: sticky navigat
 
 ### Assistant
 Implemented the requested multi-page portfolio structure with shared CSS and JS, sticky navigation on all pages, active menu styling, responsive layout, dedicated CV page with embedded PDF object and download link, and dynamic project detail toggles on the same page. Added placeholder visuals and docs folder guidance.
+
+### User
+bu cv de kullanilan renkleri kullanabilir misin design icinde
+
+### Assistant
+Updated the shared palette and design accents to match the CV colors (navy, light blue, white, and dark neutral tones).
+
+### User
+Design feedback: make the site more attractive and innovative, with stronger motion/animation and a large eye-catching element instead of a flat container look.
+
+### Assistant
+Redesigned the homepage hero with a large animated orbital visual that occupies about half the screen, added dynamic background motion layers, introduced richer button and card interactions, and implemented scroll-reveal animations for key sections to create a more engaging, modern experience.
+
+### User
+Requested to update home page content with a specific introduction text about Mehmet Görmez and the portfolio purpose.
+
+### Assistant
+Updated the home page hero paragraph with the exact provided content.
+
+### User
+Feedback that the new home layout still did not feel right and requested correction.
+
+### Assistant
+Refined the hero content hierarchy: changed the main heading to "Mehmet Görmez", added a professional subtitle ("Applied Computer Science Student"), and reduced typography intensity for a cleaner, more balanced first impression.
+
+### User
+Requested to revert that hero adjustment, remove the "Mehmet Görmez" heading, and keep only the "Welcome to my portfolio." line in that area.
+
+### Assistant
+Reverted the oversized welcome badge styling to a balanced earlier version and removed the hero heading/subtitle so the section starts with only the welcome line plus the descriptive paragraph.
+
+### User
+Requested a design similar to enesehs.dev, but implemented as separate pages per section instead of a single-page structure.
+
+### Assistant
+Started and applied a full style-system redesign: modern dark showcase look, consistent section-intro structure across Home/About/Projects/CV, updated hero presentation, and unified multi-page visual language with motion and interactive cards.

@@ -3,8 +3,8 @@
   <desc id="desc">A modern abstract cover image placeholder for a portfolio homepage.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1c776d"/>
-      <stop offset="100%" stop-color="#e47a4a"/>
+      <stop offset="0%" stop-color="#003a5d"/>
+      <stop offset="100%" stop-color="#5a8ec4"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="760" fill="url(#bg)"/>
