@@ -114,3 +114,9 @@ Requested that the SKIL2 Semester 1 report PDF in assets/docs should be download
 
 ### Assistant
 Added a dedicated download button to the Semester 1 project page and linked it to `assets/docs/skill 2 semester 1 report.pdf` with a download attribute.
+
+### User
+Requested removing "required evidence" and assignment-like phrasing to keep the page fully professional and information-focused.
+
+### Assistant
+Updated the Semester 1 project page by removing requirement-oriented wording, removing page-number references in diagram labels, and polishing the role sentence into a professional final form.
