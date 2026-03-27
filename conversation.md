@@ -60,3 +60,21 @@ Requested a design similar to enesehs.dev, but implemented as separate pages per
 
 ### Assistant
 Started and applied a full style-system redesign: modern dark showcase look, consistent section-intro structure across Home/About/Projects/CV, updated hero presentation, and unified multi-page visual language with motion and interactive cards.
+
+### User
+Reported that the background appears a bit late when opening the screen and asked to fix it.
+
+### Assistant
+Optimized first paint by adding immediate inline base background styles to all pages and removing CSS @import-based webfont loading that could delay initial rendering.
+
+### User
+Approved the look and then requested the home/welcome section to match a specific reference layout with left-focused headline/text and right circular portrait + social row.
+
+### Assistant
+Rebuilt the home hero to match that composition: "I'm" label, large role headline, italic subtitle, intro paragraph, two rounded CTA buttons, a large circular portrait on the right, and social icon-style buttons underneath.
+
+### User
+Requested the home section to be scaled down because everything looked too large, and asked for a 100vh-style section behavior like the reference site.
+
+### Assistant
+Reduced typography, buttons, circle/avatar, and spacing in the home hero, and set the desktop hero section to viewport-based height (100svh minus navbar) for a cleaner full-screen section feel.
