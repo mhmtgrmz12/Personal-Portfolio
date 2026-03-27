@@ -8,6 +8,14 @@
       name="description"
       content="Welcome to Mehmet's portfolio. Applied Computer Science student at Thomas More Geel."
     />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body data-page="home">
@@ -23,22 +31,46 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="cv.html">CV</a></li>
         </ul>
+        <div class="nav-switch" aria-hidden="true"><span></span></div>
       </nav>
     </header>
 
     <main>
       <section class="hero container">
         <div class="hero-copy">
-          <p class="eyebrow">Welcome to my portfolio.</p>
-          <h1>Hi, I am Mehmet.</h1>
-          <p>
-            I am a student at Thomas More Geel in Applied Computer Science, with a focus on
-            Cloud and Cyber Security.
+          <p class="eyebrow">Welcome to my Portfolio!</p>
+          <p class="hero-im">I'm</p>
+          <h1 class="hero-title">Mehmet Görmez</h1>
+          <p class="hero-intro">
+            I am an Applied Computer Science student at Thomas More
+            (Campus Geel). This portfolio serves as a showcase of my academic journey, highlighting
+            the projects, experiments, and technical achievements I have completed throughout my
+            studies.
           </p>
-          <a class="btn" href="projects.html">Discover My Projects</a>
+          <div class="hero-actions">
+            <a class="btn" href="about.html">Learn More</a>
+            <a class="btn btn-ghost" href="projects.html">See My Projects</a>
+          </div>
         </div>
+
         <div class="hero-media">
-          <img src="assets/images/hero-cover.svg" alt="Professional hero cover image placeholder" />
+          <div class="hero-circle-wrap">
+            <div class="hero-circle">
+              <img
+                class="hero-portrait"
+                src="assets/images/portrait-placeholder.jpeg"
+                alt="Portrait placeholder for Mehmet Görmez"
+              />
+            </div>
+            <div class="hero-socials" aria-label="Social links">
+              <a class="social-btn" href="#" aria-label="LinkedIn">in</a>
+              <a class="social-btn" href="#" aria-label="GitHub">gh</a>
+              <a class="social-btn" href="#" aria-label="Website">web</a>
+              <a class="social-btn" href="#" aria-label="Instagram">ig</a>
+              <a class="social-btn" href="#" aria-label="Spotify">sp</a>
+              <a class="social-btn" href="#" aria-label="YouTube">yt</a>
+            </div>
+          </div>
         </div>
       </section>
 

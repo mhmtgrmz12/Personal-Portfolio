@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mehmet | CV</title>
     <meta name="description" content="Mehmet's CV page with embedded PDF and download link." />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body data-page="cv">
@@ -20,11 +28,13 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a class="active" href="cv.html">CV</a></li>
         </ul>
+        <div class="nav-switch" aria-hidden="true"><span></span></div>
       </nav>
     </header>
 
     <main class="container page-section">
-      <section class="panel">
+      <section class="page-hero">
+        <p class="section-kicker">CV Section</p>
         <h1>Curriculum Vitae</h1>
         <p>Preview my CV below or download the PDF directly.</p>
         <a class="btn" href="assets/docs/CV_firstname_lastname.pdf" download>Download CV</a>

@@ -42,3 +42,25 @@ closeButtons.forEach((button) => {
     closeAllDetails();
   });
 });
+
+const revealTargets = document.querySelectorAll(
+  ".page-hero, .panel, .project-tile, .story-card, .portrait-card, .project-detail, .cv-frame-wrap, .showcase-card"
+);
+
+if (revealTargets.length > 0) {
+  revealTargets.forEach((el) => el.classList.add("reveal"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealTargets.forEach((el) => revealObserver.observe(el));
+}
