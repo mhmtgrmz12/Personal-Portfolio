@@ -479,6 +479,10 @@ img {
   color: var(--muted);
 }
 
+.story-card p + p {
+  margin-top: 0.85rem;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: 0.78fr 1.22fr;
@@ -501,6 +505,10 @@ img {
   padding-left: 1.1rem;
 }
 
+.clean-list li + li {
+  margin-top: 0.48rem;
+}
+
 .chip-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -518,6 +526,7 @@ img {
 
 .subheading {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .projects-grid {

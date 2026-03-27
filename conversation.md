@@ -78,3 +78,15 @@ Requested the home section to be scaled down because everything looked too large
 
 ### Assistant
 Reduced typography, buttons, circle/avatar, and spacing in the home hero, and set the desktop hero section to viewport-based height (100svh minus navbar) for a cleaner full-screen section feel.
+
+### User
+Requested to apply new About Me content: detailed journey and ambitions text, unique hobbies list, and updated technical/professional skills.
+
+### Assistant
+Updated the About page content with the provided sections and text, replaced hobbies and skills with the requested items, and improved spacing/readability for long paragraphs and list items.
+
+### User
+Requested to also add nature camping to the hobbies list.
+
+### Assistant
+Added a new "Nature Camping" item to the Hobbies & Interests section on the About page.
