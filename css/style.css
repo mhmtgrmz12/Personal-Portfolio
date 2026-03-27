@@ -536,10 +536,12 @@ img {
 }
 
 .project-tile {
+  display: block;
   text-align: left;
   cursor: pointer;
   font-family: inherit;
   color: var(--text);
+  text-decoration: none;
   position: relative;
   overflow: hidden;
   transition: transform 0.24s ease, border-color 0.24s ease;
@@ -601,8 +603,76 @@ img {
 }
 
 .detail-media img {
+  width: 100%;
+  height: auto;
   border-radius: 0.75rem;
-  border: 1px solid var(--line-strong);
+  border: 1px solid #d7dfeb;
+  background: #fff;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.85rem;
+}
+
+.diagram-card {
+  margin: 0;
+  padding: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, #101d35 0%, #0a162b 100%);
+}
+
+.diagram-card figcaption {
+  font-size: 0.86rem;
+  color: #bcd2f2;
+  margin-bottom: 0.5rem;
+}
+
+.diagram-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #c9d5e7;
+  border-radius: 0.72rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diagram-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+
+.diagram-link-tall {
+  height: min(62vh, 760px);
+}
+
+.diagram-link-wide {
+  height: min(36vh, 420px);
+}
+
+.diagram-zoom {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-size: 0.76rem;
+  color: #ecf3ff;
+  background: #0f2345d1;
+  border: 1px solid #7ca1d857;
+  border-radius: 999px;
+  padding: 0.24rem 0.56rem;
+}
+
+.diagram-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px #0a1a3050;
 }
 
 .embed-placeholder {
@@ -758,6 +828,18 @@ img {
     flex-direction: column;
     justify-content: center;
     padding: 0.75rem 0;
+  }
+
+  .diagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram-link-tall {
+    height: min(58vh, 640px);
+  }
+
+  .diagram-link-wide {
+    height: min(42vh, 360px);
   }
 }
 
