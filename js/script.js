@@ -15,34 +15,6 @@ if (menuToggle && navLinks) {
   });
 }
 
-const projectTiles = document.querySelectorAll(".project-tile");
-const projectDetails = document.querySelectorAll(".project-detail");
-const closeButtons = document.querySelectorAll("[data-close-details]");
-
-function closeAllDetails() {
-  projectDetails.forEach((detail) => {
-    detail.hidden = true;
-  });
-}
-
-projectTiles.forEach((tile) => {
-  tile.addEventListener("click", () => {
-    const targetId = tile.getAttribute("data-target");
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    closeAllDetails();
-    target.hidden = false;
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-closeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    closeAllDetails();
-  });
-});
-
 const revealTargets = document.querySelectorAll(
   ".page-hero, .panel, .project-tile, .story-card, .portrait-card, .project-detail, .cv-frame-wrap, .showcase-card"
 );

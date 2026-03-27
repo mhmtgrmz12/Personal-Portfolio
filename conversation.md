@@ -90,3 +90,33 @@ Requested to also add nature camping to the hobbies list.
 
 ### Assistant
 Added a new "Nature Camping" item to the Hobbies & Interests section on the About page.
+
+### User
+Moved to Projects section and requested each project tile to open a new page. Asked to create Semester 1 project detail page and add full provided content.
+
+### Assistant
+Converted project tiles to open dedicated pages, created a full Semester 1 project page with the provided context/realisations/learnings/team-role content, embedded required diagram image areas, and added dedicated pages for the other project tiles as well.
+
+### User
+Requested diagram images to have white backgrounds (because exports are transparent) and to open in large view when clicked.
+
+### Assistant
+Updated the Semester 1 project page so diagram visuals sit on white-backed image cards and each image opens in a new tab at full size when clicked.
+
+### User
+Shared feedback that the current diagram display still does not look good and asked what can be changed.
+
+### Assistant
+Redesigned the diagram presentation into cleaner preview cards with titles, fixed-height framed thumbnails, and an explicit "Open Full Size" overlay action while preserving click-to-open full-size behavior.
+
+### User
+Requested that the SKIL2 Semester 1 report PDF in assets/docs should be downloadable directly from the same project page.
+
+### Assistant
+Added a dedicated download button to the Semester 1 project page and linked it to `assets/docs/skill 2 semester 1 report.pdf` with a download attribute.
+
+### User
+Requested removing "required evidence" and assignment-like phrasing to keep the page fully professional and information-focused.
+
+### Assistant
+Updated the Semester 1 project page by removing requirement-oriented wording, removing page-number references in diagram labels, and polishing the role sentence into a professional final form.
