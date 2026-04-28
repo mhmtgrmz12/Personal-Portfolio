@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mehmet | Additional Project 2</title>
-    <meta name="description" content="Additional Project 2 detail page." />
+    <title>Mehmet | Rozana Spark</title>
+    <meta
+      name="description"
+      content="Rozana Spark — a full-stack inventory and e-commerce management platform built with Laravel 12, Livewire Flux, and Laravel Fortify."
+    />
     <style>
       html,
       body {
         margin: 0;
         background: #060b16;
         color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
       }
     </style>
     <link rel="stylesheet" href="css/style.css" />
@@ -28,20 +34,254 @@
           <li><a class="active" href="projects.html">Projects</a></li>
           <li><a href="cv.html">CV</a></li>
         </ul>
-        <div class="nav-switch" aria-hidden="true"><span></span></div>
       </nav>
     </header>
 
     <main class="container page-section">
+
+      <!-- Hero -->
       <section class="page-hero">
-        <p class="section-kicker">Project Page</p>
-        <h1>Additional Project 2</h1>
-        <p>This page is not ready.</p>
+        <p class="section-kicker">Additional Project</p>
+        <h1>Rozana Spark Website</h1>
+        <p>
+          A full-stack inventory and e-commerce management platform built solo with Laravel 12 and
+          Livewire — combining an admin panel for inventory, orders, sales, and financial tracking
+          with a customer-facing webshop.
+        </p>
+        <p class="subheading">
+          <a class="btn" href="https://rozana.rozanaspark.be" target="_blank" rel="noopener noreferrer">View Live Site</a>
+        </p>
       </section>
 
+      <!-- Tech stack chips -->
       <section class="panel">
-        <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Laravel 12</span>
+          <span class="chip">Livewire Volt</span>
+          <span class="chip">Livewire Flux</span>
+          <span class="chip">Laravel Fortify</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">Pest (Testing)</span>
+          <span class="chip">Intervention Image</span>
+          <span class="chip">PHP 8.3</span>
+          <span class="chip">TailwindCSS</span>
+        </div>
       </section>
+
+      <!-- Context -->
+      <section class="panel">
+        <h2>Context &amp; Background</h2>
+        <p>
+          Rozana Spark is a decorative items business that needed a centralized digital platform to
+          replace manual stock tracking and scattered sales records. The goal was to build a
+          single system where the business owner could manage the full lifecycle of a product —
+          from supplier order through to final sale — while also giving customers a webshop to
+          browse and purchase items directly.
+        </p>
+        <p style="margin-top:0.85rem;">
+          I built the entire platform solo, designing the database architecture, implementing
+          all business logic, and delivering both the admin panel and the customer-facing webshop
+          as a unified Laravel application.
+        </p>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="panel">
+        <h2>Screenshots</h2>
+        <div class="diagram-grid">
+          <figure class="diagram-card">
+            <figcaption>Admin Dashboard</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/rozana-admin-dashboard.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open admin dashboard screenshot in full size"
+            >
+              <img
+                src="assets/images/rozana-admin-dashboard.png"
+                alt="Rozana Spark admin dashboard"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>Inventory — Item Management</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/rozana-items.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open item management screenshot in full size"
+            >
+              <img
+                src="assets/images/rozana-items.png"
+                alt="Rozana Spark item list with filters"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>Finance Summary</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/rozana-finance.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open finance summary screenshot in full size"
+            >
+              <img
+                src="assets/images/rozana-finance.png"
+                alt="Rozana Spark monthly finance summary"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>Customer Webshop</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/rozana-webshop.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open webshop screenshot in full size"
+            >
+              <img
+                src="assets/images/rozana-webshop.png"
+                alt="Rozana Spark customer-facing webshop"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Demo credentials -->
+      <section class="panel">
+        <h2>Try It Yourself</h2>
+        <p>
+          The live site is open to explore. Log in with the admin account to access the full
+          admin panel — inventory, orders, sales, finance, and settings.
+        </p>
+        <div style="margin-top:0.9rem; display:flex; flex-direction:column; gap:0.4rem;">
+          <p style="margin:0;"><strong>Admin login:</strong></p>
+          <p style="margin:0;">Email: <code>admin@example.com</code></p>
+          <p style="margin:0;">Password: <code>admin</code></p>
+        </div>
+      </section>
+
+      <!-- Realisations -->
+      <section class="panel">
+        <h2>Realisations</h2>
+        <p>The delivered platform covers the following implemented modules:</p>
+        <ul class="clean-list" style="margin-top:0.7rem;">
+          <li>
+            <strong>Authentication &amp; Security:</strong> Full login system with two-factor
+            authentication (2FA) via Laravel Fortify, email verification, password recovery,
+            and rate-limited login (5 attempts per minute).
+          </li>
+          <li>
+            <strong>Role-Based Access Control:</strong> Binary admin/user distinction enforced
+            via custom <code>EnsureUserIsAdmin</code> middleware protecting all
+            <code>/admin/*</code> routes.
+          </li>
+          <li>
+            <strong>Inventory Management:</strong> Full CRUD for items with photo upload,
+            quantity tracking, and categorization by color, type, supplier, and materials
+            (many-to-many). Filter and search across all attributes with a reusable
+            Livewire filter component.
+          </li>
+          <li>
+            <strong>Supplier Order Tracking:</strong> Create and manage supplier purchase
+            orders. Marking an order as "arrived" automatically creates a new item or
+            increments the existing item's stock count, and triggers a financial summary sync.
+          </li>
+          <li>
+            <strong>Sales Management:</strong> Record and manage completed sales. Deleting a
+            sale rolls back the item's inventory count automatically. Monthly revenue and
+            sale count summaries update in real time.
+          </li>
+          <li>
+            <strong>Expense Tracking:</strong> Log business expenses by month and year,
+            factored into the monthly financial calculations.
+          </li>
+          <li>
+            <strong>Finance Summary Engine:</strong> A <code>FinanceSummaryService</code>
+            automatically calculates monthly profit as total sales minus expenses and order
+            costs — synced on every relevant create, update, or delete action.
+          </li>
+          <li>
+            <strong>Master Data Management:</strong> A generic <code>CrudManager</code>
+            Livewire component handles CRUD for all lookup tables (colors, types, materials,
+            suppliers) from a single reusable implementation.
+          </li>
+          <li>
+            <strong>Customer Webshop:</strong> A public-facing product listing with filters
+            by type, color, and material, a shopping cart (one cart per user), and real-time
+            cart count updates via Livewire events.
+          </li>
+          <li>
+            <strong>Image Handling:</strong> Item photo upload and storage via Laravel
+            Storage, with Intervention Image for image processing.
+          </li>
+          <li>
+            <strong>Settings Management:</strong> A key-value settings store with an admin
+            UI for application-wide configuration.
+          </li>
+          <li>
+            <strong>Automated Testing:</strong> A Pest test suite covering authentication
+            flows, admin access control, and core business logic.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Hard / Soft skills -->
+      <section class="split-grid">
+        <article class="panel">
+          <h2>What I Learned — Hard Skills</h2>
+          <ul class="clean-list">
+            <li>Full-stack Laravel development (MVC, Eloquent ORM, migrations, factories, seeders)</li>
+            <li>Livewire Volt &amp; Livewire Flux (reactive single-file components)</li>
+            <li>Two-factor authentication with Laravel Fortify</li>
+            <li>Role-based middleware and route protection</li>
+            <li>Building generic CRUD components reusable across multiple entities</li>
+            <li>Service-oriented business logic (FinanceSummaryService, CostCalculationService)</li>
+            <li>Image upload and storage with Intervention Image</li>
+            <li>Many-to-many relationships with pivot tables (item–material, order–material)</li>
+            <li>Automated feature testing with Pest</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>What I Learned — Soft Skills</h2>
+          <ul class="clean-list">
+            <li>Translating real business needs into a database and application architecture</li>
+            <li>Solo project ownership — making every architectural decision independently</li>
+            <li>Designing for two distinct audiences (admin vs. customer) in a single application</li>
+            <li>Keeping code DRY and maintainable across a growing feature set</li>
+            <li>Iterative development — building, testing, and refining sprint by sprint</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- My Role -->
+      <section class="panel">
+        <h2>My Role</h2>
+        <p>
+          I designed and built this entire platform solo — from the initial database schema through
+          to production deployment. Every module, from the financial summary engine to the
+          customer webshop cart, was designed, implemented, and tested by me. This project gave me
+          end-to-end ownership of a real-world application serving an actual business.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
