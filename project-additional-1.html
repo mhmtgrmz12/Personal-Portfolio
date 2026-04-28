@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mehmet | Additional Project 1</title>
-    <meta name="description" content="Additional Project 1 detail page." />
+    <title>Mehmet | Civic Concierge</title>
+    <meta
+      name="description"
+      content="Civic Concierge — a multilingual vehicle registration web platform built with Vanilla JS, n8n, and WhatsApp Business integration."
+    />
     <style>
       html,
       body {
         margin: 0;
         background: #060b16;
         color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
       }
     </style>
     <link rel="stylesheet" href="css/style.css" />
@@ -33,15 +39,237 @@
     </header>
 
     <main class="container page-section">
+
+      <!-- Hero -->
       <section class="page-hero">
-        <p class="section-kicker">Project Page</p>
-        <h1>Additional Project 1</h1>
-        <p>This page is not ready.</p>
+        <p class="section-kicker">Additional Project</p>
+        <h1>Civic Concierge — Vehicle Registration Web Platform</h1>
+        <p>
+          A production-ready, multilingual web platform built for a Belgian automotive services
+          business, enabling clients to book vehicle registration appointments and connect instantly
+          with staff via WhatsApp — all without a backend server.
+        </p>
+        <p class="subheading">
+          <a class="btn" href="https://teambecker.netlify.app" target="_blank" rel="noopener noreferrer">View Live Site</a>
+        </p>
       </section>
 
+      <!-- Tech stack chips -->
       <section class="panel">
-        <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Vanilla HTML/CSS/JS</span>
+          <span class="chip">ES Modules</span>
+          <span class="chip">Tailwind CSS (CDN)</span>
+          <span class="chip">n8n (Webhooks)</span>
+          <span class="chip">JSON Data Layer</span>
+          <span class="chip">WhatsApp Business API</span>
+          <span class="chip">i18n (5 languages)</span>
+          <span class="chip">JSON-LD / Schema.org</span>
+          <span class="chip">Netlify</span>
+        </div>
       </section>
+
+      <!-- Context -->
+      <section class="panel">
+        <h2>Context &amp; Background</h2>
+        <p>
+          Civic Concierge is a real client project built for a Belgian automotive services company
+          that handles vehicle registration, number plate requests, and related administrative tasks
+          on behalf of individuals and businesses. The client needed a professional online presence
+          that could serve customers in five languages and seamlessly funnel them into WhatsApp
+          conversations with staff — all while keeping infrastructure costs at zero.
+        </p>
+        <p style="margin-top:0.85rem;">
+          The core challenge was building a polished, production-grade platform without a traditional
+          server or CMS. The solution uses a fully static architecture: HTML partials injected at
+          runtime, all business data loaded from JSON files, and a self-hosted n8n instance handling
+          the webhook-based chatbot and lead capture — meaning the site deploys to any static host
+          with no database or server-side language required.
+        </p>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="panel">
+        <h2>Screenshots</h2>
+        <div class="diagram-grid">
+          <figure class="diagram-card">
+            <figcaption>n8n Workflow — Chatbot &amp; Lead Capture</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/civic-concierge-n8n.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open n8n workflow screenshot in full size"
+            >
+              <img
+                src="assets/images/civic-concierge-n8n.png"
+                alt="n8n workflow canvas showing chatbot and lead capture automation"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>Homepage — Hero &amp; Service Cards</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/civic-concierge-home.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open homepage screenshot in full size"
+            >
+              <img
+                src="assets/images/civic-concierge-home.png"
+                alt="Civic Concierge homepage showing hero section and service cards"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>WhatsApp Checkout Wizard</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/civic-concierge-wizard.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open WhatsApp wizard screenshot in full size"
+            >
+              <img
+                src="assets/images/civic-concierge-wizard.png"
+                alt="Civic Concierge 3-step WhatsApp checkout wizard"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Realisations -->
+      <section class="panel">
+        <h2>Realisations</h2>
+        <p>The delivered platform covers the following features and systems:</p>
+        <ul class="clean-list" style="margin-top:0.7rem;">
+          <li>
+            <strong>Runtime i18n Engine:</strong> A fully custom internationalization system
+            supporting English, German, Turkish, Arabic, and Russian — with automatic browser
+            language detection, RTL layout switching for Arabic, and zero build-step overhead.
+            All translations are stored in JSON files and swapped in the DOM at runtime.
+          </li>
+          <li>
+            <strong>WhatsApp Checkout Wizard:</strong> A guided 3-step booking flow that collects
+            the customer's service type, vehicle details, and preferred contact time, then
+            assembles a pre-filled <code>wa.me</code> deep-link that opens a WhatsApp conversation
+            with the correct message already typed — no backend required for the handoff.
+          </li>
+          <li>
+            <strong>n8n Chatbot Integration:</strong> An embedded chatbot powered by a self-hosted
+            n8n webhook. The chatbot handles common questions with a scripted decision tree and
+            falls back gracefully to an offline mode when the webhook is unreachable, using
+            sessionStorage to persist the conversation across page navigations.
+          </li>
+          <li>
+            <strong>Lead Capture via n8n:</strong> Contact form submissions are routed through an
+            n8n webhook that handles validation, stores leads, and triggers email notifications —
+            entirely server-free from the front-end perspective.
+          </li>
+          <li>
+            <strong>JSON-Driven Content Layer:</strong> All business data (services, pricing,
+            FAQs, office locations, team members) is stored in versioned JSON files under
+            <code>/assets/data/</code>. The UI fetches and renders this data at runtime, making
+            content updates a matter of editing a JSON file with no HTML changes needed.
+          </li>
+          <li>
+            <strong>HTML Partial Injection:</strong> A lightweight <code>include.js</code> module
+            injects shared partials (header, footer, cookie banner) into every page at load time —
+            giving the feel of a template engine with no server or framework required.
+          </li>
+          <li>
+            <strong>GDPR Cookie Consent:</strong> A versioned cookie consent system built from
+            scratch: remembers user preference in localStorage, supports granular accept/reject,
+            and re-prompts automatically when the consent version is bumped.
+          </li>
+          <li>
+            <strong>JSON-LD Schema Markup:</strong> Every page includes structured
+            <code>AutomotiveBusiness</code> schema markup (JSON-LD) for search engine visibility,
+            covering business name, address, opening hours, contact details, and service offerings.
+          </li>
+          <li>
+            <strong>IntersectionObserver Animations:</strong> Scroll-triggered reveal animations
+            on service cards and content sections, implemented with the IntersectionObserver API
+            for performance — no animation library dependency.
+          </li>
+          <li>
+            <strong>Zero-Dependency Architecture:</strong> The entire frontend runs as ES Modules
+            with no bundler, no npm, and no build step. Tailwind CSS is loaded from CDN.
+            The site deploys to Netlify (or any static host) as plain HTML files.
+          </li>
+          <li>
+            <strong>Responsive &amp; Accessible:</strong> Mobile-first layout with full keyboard
+            navigability, ARIA labels on interactive elements, and semantic HTML throughout.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Architecture -->
+      <section class="panel">
+        <h2>Architecture Overview</h2>
+        <p>
+          The platform deliberately avoids traditional server-side complexity. The front-end is a
+          collection of static HTML pages enhanced by a small ES Module layer: <code>include.js</code>
+          handles partial injection, <code>i18n.js</code> drives translations, and
+          <code>data-loader.js</code> fetches and renders JSON content. The WhatsApp integration
+          requires no API credentials — it constructs <code>wa.me</code> URLs client-side.
+          The only external service dependency is the self-hosted n8n instance, which the site
+          calls via fetch; if it's unreachable, the chatbot silently switches to offline mode.
+        </p>
+      </section>
+
+      <!-- Hard / Soft skills -->
+      <section class="split-grid">
+        <article class="panel">
+          <h2>What I Learned — Hard Skills</h2>
+          <ul class="clean-list">
+            <li>Building a custom runtime i18n engine with RTL support in Vanilla JS</li>
+            <li>WhatsApp Business deep-link integration and prefilled message construction</li>
+            <li>n8n webhook configuration for chatbot flows and lead capture</li>
+            <li>JSON-driven content architecture with runtime DOM rendering</li>
+            <li>HTML partial injection without a framework or build tool</li>
+            <li>JSON-LD / Schema.org structured data for SEO</li>
+            <li>GDPR-compliant cookie consent implementation</li>
+            <li>IntersectionObserver API for scroll-triggered animations</li>
+            <li>Static site deployment and configuration on Netlify</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>What I Learned — Soft Skills</h2>
+          <ul class="clean-list">
+            <li>Translating real client requirements into a technical architecture</li>
+            <li>Making pragmatic trade-offs: zero infrastructure cost vs. feature complexity</li>
+            <li>Designing for a multilingual, international audience</li>
+            <li>Writing maintainable, self-documenting front-end code without a framework</li>
+            <li>Client communication and iterative delivery based on feedback</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- My Role -->
+      <section class="panel">
+        <h2>My Role</h2>
+        <p>
+          I designed and built the entire platform solo — from the initial architecture decisions
+          through to deployment. This included the i18n engine, the WhatsApp wizard, the n8n
+          chatbot integration, the JSON content layer, and the GDPR consent system. The project
+          gave me hands-on experience shipping a production site to a real client with real users,
+          with full ownership of every technical and design decision.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
