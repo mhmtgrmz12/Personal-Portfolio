@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mehmet | SKIL2 Semester 2</title>
-    <meta name="description" content="Project Semester 2 SKIL2 detail page." />
+    <meta
+      name="description"
+      content="The Andersons Household Management Application — SKIL2 Semester 2 full-stack Laravel project."
+    />
     <style>
       html,
       body {
         margin: 0;
         background: #060b16;
         color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
       }
     </style>
     <link rel="stylesheet" href="css/style.css" />
@@ -33,15 +39,222 @@
     </header>
 
     <main class="container page-section">
+
+      <!-- Hero -->
       <section class="page-hero">
-        <p class="section-kicker">Project Page</p>
-        <h1>Project Semester 2 SKIL2</h1>
-        <p>This page is not ready.</p>
+        <p class="section-kicker">Top Project</p>
+        <h1>The Andersons — Household Management Application</h1>
+        <p>
+          A full-stack web application built with Laravel &amp; Livewire to centralize scheduling,
+          task management, meal planning, travel tracking, and expense management for a wealthy
+          household and its staff.
+        </p>
+        <p class="subheading">
+          <a
+            class="btn"
+            href="assets/docs/Analysis%20and%20Design%20Report%20-%20SKIL2%20Semester%202.pdf"
+            download="Analysis and Design Report - SKIL2 Semester 2.pdf"
+            >Download Final Report (PDF)</a
+          >
+        </p>
       </section>
 
+      <!-- Tech stack chips -->
       <section class="panel">
-        <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Laravel 12</span>
+          <span class="chip">Livewire Flux</span>
+          <span class="chip">Laravel Fortify</span>
+          <span class="chip">Pusher (WebSockets)</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">Pest (Testing)</span>
+          <span class="chip">Vite</span>
+          <span class="chip">PHP 8.2</span>
+          <span class="chip">TailwindCSS</span>
+        </div>
       </section>
+
+      <!-- Context -->
+      <section class="panel">
+        <h2>Context &amp; Background</h2>
+        <p>
+          Working as a team, our goal was to design and implement a comprehensive digital solution
+          for "The Andersons" — a wealthy
+          family that relies on a household staff of chefs, administrative assistants, and other
+          personnel to manage day-to-day operations.
+        </p>
+        <p style="margin-top:0.85rem;">
+          The core problem was a lack of any centralized system: tasks, schedules, meals, trips, and
+          expenses were all managed separately or informally, leading to miscommunication and a
+          missing overview. Our application consolidates everything into a single platform with
+          role-based access for five distinct user types: <strong>Admin</strong>,
+          <strong>Staff</strong>, <strong>Chef</strong>, <strong>Family Member</strong>, and
+          <strong>The Andersons</strong> (heads of household).
+        </p>
+      </section>
+
+      <!-- Realisations -->
+      <section class="panel">
+        <h2>Realisations</h2>
+        <p>
+          We delivered a working web application covering the following implemented modules:
+        </p>
+        <ul class="clean-list" style="margin-top:0.7rem;">
+          <li>
+            <strong>Authentication &amp; Security:</strong> Full login system with two-factor
+            authentication (2FA) via Laravel Fortify, password recovery via email, and role-based
+            middleware protecting every route.
+          </li>
+          <li>
+            <strong>Dashboard:</strong> A personalized overview displaying today's tasks (with
+            priority and time filters), upcoming trips with checkpoints, and upcoming dinner plans —
+            all adapted per user role.
+          </li>
+          <li>
+            <strong>Task Management:</strong> Staff can view, create, complete, and manage their
+            personal tasks. Family members and The Andersons get a read-only overview of all
+            household tasks for the day.
+          </li>
+          <li>
+            <strong>Invoice &amp; Expense Management:</strong> Staff and Chefs upload receipts with
+            file attachments; Admins and The Andersons can approve, mark as paid, and filter all
+            household expenses. Full CRUD with status tracking (unpaid / paid).
+          </li>
+          <li>
+            <strong>Meal Planning:</strong> Admins and Chefs manage planned meals; all users can
+            join or cancel a dinner, add a guest, and view upcoming meal schedules. Chefs can
+            confirm when a meal is prepared and view consolidated allergy information.
+          </li>
+          <li>
+            <strong>Unavailability Management:</strong> Staff and Chefs register unavailability
+            periods with start/end times. The system automatically detects conflicts with existing
+            assigned tasks and blocks invalid entries.
+          </li>
+          <li>
+            <strong>Admin Panel:</strong> A tabbed management panel for Admins covering user
+            management (create, edit, deactivate/delete), role color customization, receipt
+            categories, task categories, locations, and task priorities — all protected by
+            password re-confirmation modals.
+          </li>
+          <li>
+            <strong>Real-time Notifications:</strong> A Pusher-powered WebSocket notification
+            system with an in-app notification bell, supporting task assignments, collaboration
+            requests, and task reminders.
+          </li>
+          <li>
+            <strong>Schedule Calendar:</strong> A visual calendar showing the household's full
+            schedule across days, weeks, and months.
+          </li>
+          <li>
+            <strong>Staff Availability Calendar:</strong> Admins can view all staff availability
+            and unavailability periods on a shared calendar.
+          </li>
+          <li>
+            <strong>Automated Testing:</strong> A Pest test suite covering authentication, admin
+            panel, invoice flows, meal access control, notification API, and smoke tests across all
+            major routes.
+          </li>
+        </ul>
+
+        <p class="subheading" style="margin-top:1.2rem;"><strong>Key Diagrams:</strong> Use Case and ERD overviews.</p>
+        <div class="diagram-grid">
+          <figure class="diagram-card">
+            <figcaption>Use Case Diagram</figcaption>
+            <a
+              class="diagram-link diagram-link-tall"
+              href="assets/images/skil2-sem2-use-case.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Use Case diagram in full size"
+            >
+              <img
+                src="assets/images/skil2-sem2-use-case.png"
+                alt="Use Case Diagram for SKIL2 Semester 2 — The Andersons"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>Entity-Relationship Diagram (ERD)</figcaption>
+            <a
+              class="diagram-link diagram-link-wide"
+              href="assets/images/skil2-sem2-erd.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open ERD diagram in full size"
+            >
+              <img
+                src="assets/images/skil2-sem2-erd.png"
+                alt="ERD Diagram for SKIL2 Semester 2 — The Andersons"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <!-- MoSCoW -->
+      <section class="panel" style="margin-bottom: 1.2rem; margin-top: 1.2rem;">
+        <h2>Feature Prioritization — MoSCoW</h2>
+        <p>
+          We used the MoSCoW method to prioritize the 28 identified use cases. The
+          <strong>Must Have</strong> features formed the core of our implementation: login &amp;
+          authentication, task management (personal and staff-wide), availability management,
+          trip and checkpoint tracking, meal planning and subscriptions, allergy management,
+          invoice management, and user administration. <strong>Should Have</strong> features
+          included account settings, schedule printing, and receipt printing.
+          <strong>Could Have</strong> covered collaboration request flows.
+          <strong>Won't Have</strong> for this iteration: multi-household support.
+        </p>
+      </section>
+
+      <!-- Hard / Soft skills -->
+      <section class="split-grid">
+        <article class="panel">
+          <h2>What I Learned — Hard Skills</h2>
+          <ul class="clean-list">
+            <li>Full-stack Laravel development (MVC architecture, Eloquent ORM, migrations, seeders, factories)</li>
+            <li>Livewire &amp; Livewire Flux (reactive components without writing JavaScript)</li>
+            <li>Role-based access control with custom middleware</li>
+            <li>Two-factor authentication with Laravel Fortify</li>
+            <li>Real-time WebSocket communication with Pusher &amp; Laravel Echo</li>
+            <li>Automated feature testing with Pest</li>
+            <li>Task conflict detection algorithms (availability vs. task schedule overlap)</li>
+            <li>File upload handling and PDF serving via Laravel Storage</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>What I Learned — Soft Skills</h2>
+          <ul class="clean-list">
+            <li>Translating business requirements and analysis blueprints into working software</li>
+            <li>Agile-style team collaboration and task division</li>
+            <li>Thinking in user roles — designing different experiences for Admin, Staff, Chef, and Family</li>
+            <li>Writing clear technical documentation and test coverage</li>
+            <li>Iterative development — building, testing, and refining features sprint by sprint</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Teamwork -->
+      <section class="panel">
+        <h2>Teamwork &amp; My Role</h2>
+        <p>
+          This was a collaborative team project. My primary contributions were in the
+          <strong>invoice &amp; expense management</strong> module (full CRUD, role-based
+          visibility, status tracking, file serving), the <strong>unavailability system</strong>
+          (including the task conflict detection logic), and the
+          <strong>admin panel</strong> (tabbed management UI with inline editing and password
+          re-confirmation). I also contributed to the shared database architecture, seeding
+          strategies, and the Pest test suite for the invoice flows.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
