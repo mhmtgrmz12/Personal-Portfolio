@@ -13,6 +13,12 @@
         color: #e8f1ff;
       }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body data-page="projects">
@@ -33,42 +39,77 @@
 
     <main class="container page-section">
       <section class="page-hero">
-        <p class="section-kicker">Projects Section</p>
-        <h1>Projects & Achievements</h1>
-        <p>Click any project tile to open its dedicated project page.</p>
+        <p class="section-kicker">Projects</p>
+        <h1>Things I have built</h1>
+        <p>From a production SaaS platform to client websites and team projects. Open any project to see the details.</p>
       </section>
 
       <section class="projects-grid" aria-label="Project showcase">
-        <a class="project-tile" href="project-crm.html">
-          <span class="tile-kicker">Featured Project</span>
+        <a class="project-tile is-featured" href="project-crm.html">
+          <span class="tile-kicker">Featured · Own Product</span>
           <h2>Boticum CRM — Multi-Tenant SaaS CRM (Web &amp; Mobile)</h2>
-          <p>A multi-tenant SaaS CRM that brings WhatsApp and Instagram DMs into one shared inbox, with leads, a sales pipeline, invoicing, and campaigns. Built with Next.js and Supabase, plus a React Native + Expo app for iOS and Android.</p>
+          <p>A multi-tenant SaaS CRM that brings WhatsApp and Instagram DMs into one shared inbox, with leads, a sales pipeline, invoicing, campaigns, and an AI-powered automation engine. Built with Next.js and Supabase, plus a React Native + Expo app for iOS and Android.</p>
+          <div class="chip-wrap">
+            <span class="chip">Next.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">React Native</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">PostgreSQL RLS</span>
+            <span class="chip">Meta API</span>
+            <span class="chip">OpenAI API</span>
+          </div>
+          <span class="tile-link">View project →</span>
         </a>
 
         <a class="project-tile" href="project-sem1.html">
           <span class="tile-kicker">Core Project</span>
           <h2>Grow Kasterlee Gym Application</h2>
-          <p>
-Team-based analysis and design project focused on requirements, user interaction models, and scalable data architecture.</p>
+          <p>A team-based analysis and design project focused on requirements, user interaction models, and a scalable data architecture.</p>
+          <div class="chip-wrap">
+            <span class="chip">Analysis &amp; Design</span>
+            <span class="chip">Use Cases</span>
+            <span class="chip">ERD</span>
+          </div>
+          <span class="tile-link">View project →</span>
         </a>
 
         <a class="project-tile" href="project-sem2.html">
           <span class="tile-kicker">Top Project</span>
           <h2>The Andersons — Household Management Application</h2>
-          <p>A full-stack web application built with Laravel & Livewire to centralize scheduling, task management, meal planning, travel tracking, and expense management for a wealthy household and its staff.</p>
+          <p>A full-stack Laravel &amp; Livewire application that centralizes scheduling, tasks, meal planning, travel, and expenses for a household and its staff.</p>
+          <div class="chip-wrap">
+            <span class="chip">Laravel 12</span>
+            <span class="chip">Livewire Flux</span>
+            <span class="chip">Pusher</span>
+            <span class="chip">Pest</span>
+          </div>
+          <span class="tile-link">View project →</span>
         </a>
 
         <a class="project-tile" href="project-additional-1.html">
           <span class="tile-kicker">Additional</span>
           <h2>Civic Concierge — Vehicle Registration Web Platform</h2>
-          <p>
-A production-ready, multilingual web platform built for a Belgian automotive services business, enabling clients to book vehicle registration appointments and connect instantly with staff via WhatsApp — all without a backend server.</p>
+          <p>A multilingual web platform for a Belgian automotive services business. Clients book vehicle registration appointments and reach staff instantly via WhatsApp, without a backend server.</p>
+          <div class="chip-wrap">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">n8n</span>
+            <span class="chip">WhatsApp API</span>
+          </div>
+          <span class="tile-link">View project →</span>
         </a>
 
         <a class="project-tile" href="project-additional-2.html">
           <span class="tile-kicker">Additional</span>
           <h2>Rozana Spark Website</h2>
-          <p>A full-stack inventory and e-commerce management platform built solo with Laravel 12 and Livewire — combining an admin panel for inventory, orders, sales, and financial tracking with a customer-facing webshop.</p>
+          <p>A full-stack inventory and e-commerce platform built solo with Laravel 12 and Livewire, combining an admin panel for inventory, orders, sales, and finances with a customer-facing webshop.</p>
+          <div class="chip-wrap">
+            <span class="chip">Laravel 12</span>
+            <span class="chip">Livewire</span>
+            <span class="chip">SQLite</span>
+            <span class="chip">Pest</span>
+          </div>
+          <span class="tile-link">View project →</span>
         </a>
       </section>
     </main>

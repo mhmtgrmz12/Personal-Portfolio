@@ -16,7 +16,7 @@ if (menuToggle && navLinks) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".page-hero, .panel, .project-tile, .story-card, .portrait-card, .project-detail, .cv-frame-wrap, .showcase-card"
+  ".page-hero, .panel, .project-tile, .story-card, .portrait-card, .fact, .cv-frame-wrap"
 );
 
 if (revealTargets.length > 0) {
