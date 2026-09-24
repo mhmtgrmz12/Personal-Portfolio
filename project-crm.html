@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | Boticum CRM</title>
+    <meta
+      name="description"
+      content="Boticum CRM — a multi-tenant SaaS CRM with a shared WhatsApp and Instagram inbox, built with Next.js, Supabase, and a React Native + Expo mobile app."
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+
+      <!-- Hero -->
+      <section class="page-hero">
+        <p class="section-kicker">Featured Project</p>
+        <h1>Boticum CRM — Multi-Tenant SaaS CRM (Web &amp; Mobile)</h1>
+        <p>
+          A multi-tenant SaaS CRM where WhatsApp and Instagram DMs flow into one shared inbox.
+          Sales teams claim conversations, build customer profiles, manage leads and deals, and
+          send invoices and campaigns — from a Next.js web app or a React Native mobile app
+          running on the same backend.
+        </p>
+      </section>
+
+      <!-- Tech stack chips -->
+      <section class="panel">
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Next.js 16 (App Router)</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React Native + Expo</span>
+          <span class="chip">Expo Router</span>
+          <span class="chip">Supabase (Postgres, Auth, Realtime, Vault)</span>
+          <span class="chip">Row Level Security</span>
+          <span class="chip">Inngest (background jobs)</span>
+          <span class="chip">Meta WhatsApp Cloud API</span>
+          <span class="chip">Instagram Graph API</span>
+          <span class="chip">Stripe</span>
+          <span class="chip">next-intl (i18n)</span>
+          <span class="chip">Zod</span>
+          <span class="chip">Vitest</span>
+          <span class="chip">pnpm Monorepo</span>
+          <span class="chip">Vercel</span>
+          <span class="chip">EAS Build</span>
+        </div>
+      </section>
+
+      <!-- Context -->
+      <section class="panel">
+        <h2>Context &amp; Background</h2>
+        <p>
+          Small and mid-sized businesses in the UAE sell mostly through WhatsApp and Instagram.
+          In practice this means several salespeople replying from one shared phone, customers
+          getting answered twice (or not at all), and no record of who talked to whom. Boticum
+          CRM was built to fix that: every message arrives in a shared inbox, one agent locks
+          the conversation, and everything the team learns about the customer is saved on a
+          single customer card.
+        </p>
+        <p style="margin-top:0.85rem;">
+          It is a SaaS product, so many companies (tenants) use the same system while their data
+          stays fully separated. Each company can have branches, and the owner decides what
+          managers and agents are allowed to see and do. Its first market is Dubai, but the
+          product was designed from the start so that language, currency, and tax rules can be
+          configured per country.
+        </p>
+        <p style="margin-top:0.85rem;">
+          I started with the architecture: locked design decisions, around 40 use cases, an ERD,
+          and a security model. I then built the system in seven phases. The web apps and the
+          database run in production, and a real WhatsApp Business number already receives and
+          sends messages through the live system.
+        </p>
+      </section>
+
+      <!-- Platforms -->
+      <section class="split-grid">
+        <article class="panel">
+          <h2>Web Application</h2>
+          <p>
+            Two separate Next.js apps deployed on Vercel. Keeping them apart means a tenant login
+            can never reach the platform back office.
+          </p>
+          <ul class="clean-list" style="margin-top:0.7rem;">
+            <li>
+              <strong>Tenant app</strong> (the CRM itself, served per company subdomain): dashboard,
+              shared inbox, customers, leads, sales pipeline, tasks, invoices, campaigns,
+              reports, exports, notifications, and settings.
+            </li>
+            <li>
+              <strong>Admin back office</strong> (for the Boticum team): tenant management and
+              suspension, platform billing, audit logs, and the platform's own WhatsApp number
+              used to send one-time codes.
+            </li>
+            <li>
+              Server components and server actions handle all data access, and every query goes
+              through the permission engine. There is no separate backend service.
+            </li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>Mobile Application</h2>
+          <p>
+            A single React Native + Expo codebase for iOS and Android, built with EAS. It uses
+            the same shared packages (<code>core</code> and <code>db</code>) as the web, so
+            permission and validation logic is written once.
+          </p>
+          <ul class="clean-list" style="margin-top:0.7rem;">
+            <li>
+              Tab navigation for <strong>Inbox, Customers, Leads, Pipeline</strong> and
+              <strong>More</strong> (tasks, invoices, campaigns, team, search, account).
+            </li>
+            <li>
+              Live chat with image and document attachments, creating and editing customers, lead
+              status changes, and approving deletion requests on the go.
+            </li>
+            <li>
+              A separate admin area in the same app for platform staff (tenants, audit log,
+              platform WhatsApp).
+            </li>
+            <li>
+              <strong>No payments on mobile:</strong> the app never shows prices or purchase
+              links. This keeps it compliant with App Store and Google Play in-app purchase rules.
+              Billing is only available on the web.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Realisations -->
+      <section class="panel">
+        <h2>Realisations</h2>
+        <p>The delivered system includes the following modules:</p>
+        <ul class="clean-list" style="margin-top:0.7rem;">
+          <li>
+            <strong>Shared Omnichannel Inbox:</strong> WhatsApp and Instagram DMs arrive through
+            one Meta webhook, get matched to the right tenant, and are stored as contact,
+            conversation, and message. An agent locks a conversation so no one else replies to
+            the same customer at the same time. Updates appear live through Supabase Realtime.
+          </li>
+          <li>
+            <strong>Channel Connections:</strong> Each tenant connects its own WhatsApp number
+            (Meta Embedded Signup or manual setup) and Instagram professional account. Every
+            tenant's access token is stored encrypted in Supabase Vault and never in plain
+            database columns.
+          </li>
+          <li>
+            <strong>Customer 360:</strong> Customer cards with custom fields, categories, notes,
+            tasks, activities, and a timeline of every interaction. Customers can be filtered by
+            source (lead, WhatsApp, Instagram, manual, import) and exported to Excel/CSV.
+          </li>
+          <li>
+            <strong>Lead Generation:</strong> Public capture forms with their own URLs, lead
+            scoring, colour-coded status stages that match Meta's Leads Center, two-way sync
+            between a lead and its customer record, and lead-to-customer conversion.
+          </li>
+          <li>
+            <strong>Sales Pipeline:</strong> A kanban board of deals with configurable stages,
+            drag-to-move, and won/lost tracking.
+          </li>
+          <li>
+            <strong>Branches &amp; Configurable RBAC:</strong> Owner, manager, and agent roles
+            plus custom roles. Permissions are a matrix of <em>resource × action × scope</em>
+            (own / branch / all / none) that the owner edits in the UI, not in code.
+          </li>
+          <li>
+            <strong>Invoicing:</strong> Tenants invoice their own customers with UAE VAT through a
+            country-aware tax layer. A paid/unpaid badge appears on the customer card.
+          </li>
+          <li>
+            <strong>Email &amp; WhatsApp Marketing:</strong> Campaigns sent by background jobs,
+            with a per-tenant sender identity, a suppression list, and approved WhatsApp templates.
+          </li>
+          <li>
+            <strong>WhatsApp Credit Wallet:</strong> A prepaid balance with a configurable
+            commission per message, automatic top-up, and a block with a top-up prompt when the
+            balance runs out.
+          </li>
+          <li>
+            <strong>Public REST API (/v1):</strong> API-key authentication, pagination, rate
+            limits, and outgoing webhooks so tenants can connect their own tools.
+          </li>
+          <li>
+            <strong>Platform Billing:</strong> Stripe subscriptions, paid add-ons that are
+            checked both in the UI and in the API, usage metering, and a flow from failed payment
+            to suspension to recovery.
+          </li>
+          <li>
+            <strong>Account Security:</strong> Owners can freeze users and reset their passwords,
+            and users can reset their own. Deleting a record requires owner approval followed by a
+            one-time code sent via WhatsApp, with email as a fallback.
+          </li>
+          <li>
+            <strong>Reporting &amp; Audit:</strong> Dashboards, agent statistics, notifications,
+            a full audit log, and data retention rules.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Architecture -->
+      <section class="panel">
+        <h2>Architecture &amp; Security</h2>
+        <ul class="clean-list">
+          <li>
+            <strong>Tenant isolation with Row Level Security:</strong> every tenant table has a
+            <code>tenant_id</code> and an RLS policy. A custom Supabase access-token hook puts
+            the tenant, role, and branch into the JWT. A set of RLS test scenarios proves that
+            one company can never read another company's data.
+          </li>
+          <li>
+            <strong>Two layers of authorization:</strong> the database enforces the tenant
+            boundary, and a shared TypeScript engine enforces branch, role, and ownership rules.
+          </li>
+          <li>
+            <strong>Background work in Inngest:</strong> webhook follow-up work, campaign sending,
+            and scheduled jobs run outside the request cycle, so the web requests stay fast.
+          </li>
+          <li>
+            <strong>Data model:</strong> more than 45 tables and around 40 SQL migrations, covering
+            CRM, messaging, invoicing, billing, wallet, API keys, and audit.
+          </li>
+          <li>
+            <strong>Testing:</strong> 400+ unit tests with Vitest, type checks across the whole
+            monorepo, and end-to-end checks of the webhook, public API, invoicing, and login for
+            all three roles.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Hard / Soft skills -->
+      <section class="split-grid">
+        <article class="panel">
+          <h2>What I Learned — Hard Skills</h2>
+          <ul class="clean-list">
+            <li>Designing a multi-tenant SaaS architecture and data model from scratch</li>
+            <li>PostgreSQL Row Level Security, JWT claims, and Supabase auth hooks</li>
+            <li>Next.js App Router with server components, server actions, and route handlers</li>
+            <li>Building a cross-platform mobile app with React Native, Expo Router, and EAS</li>
+            <li>Sharing code between web and mobile in a pnpm monorepo</li>
+            <li>Integrating the Meta WhatsApp Cloud API and Instagram Graph API with webhooks</li>
+            <li>Storing secrets in Supabase Vault and building rotation flows</li>
+            <li>Event-driven background jobs with Inngest</li>
+            <li>Subscription billing and usage metering with Stripe</li>
+            <li>REST API design with versioning, rate limiting, and outgoing webhooks</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>What I Learned — Soft Skills</h2>
+          <ul class="clean-list">
+            <li>Turning a business problem into written specifications before writing code</li>
+            <li>Planning a large build in phases and keeping a detailed progress log</li>
+            <li>Debugging production problems with third-party platforms from logs and documentation</li>
+            <li>Weighing security, cost, and app store rules when making product decisions</li>
+            <li>Gathering feedback from partners who tested the live system and turning it into features</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- My Role -->
+      <section class="panel">
+        <h2>My Role</h2>
+        <p>
+          This is my own product and I built it end to end. I wrote the architecture and the
+          database schema, implemented the web apps, the mobile app, and all the integrations,
+          and handled deployment and production debugging. The most valuable lesson was that
+          connecting to real platforms like Meta and Stripe takes as much work as building the
+          features themselves: webhook subscriptions, token lifecycles, message templates, and
+          delivery rules all had to be understood and handled correctly.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
