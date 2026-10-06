@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | Lizard Species Classification</title>
+    <meta
+      name="description"
+      content="Lizard Species Classification — a seven-class image classifier built with EfficientNetV2S transfer learning, fine-tuning and per-class evaluation."
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="page-hero">
+        <p class="section-kicker">Deep Learning · Computer Vision · Team Project</p>
+        <h1>Lizard Species Classification</h1>
+        <p>
+          A seven-class image classification project using EfficientNetV2S transfer learning, with
+          data augmentation, fine-tuning and per-class evaluation. Achieved 77.0% validation
+          accuracy and a macro F1 score of 0.7631 on 200 validation images.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Python</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">Keras</span>
+          <span class="chip">EfficientNetV2S</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">Matplotlib</span>
+        </div>
+      </section>
+
+      <section class="fact-grid" aria-label="Validation results">
+        <div class="fact"><span>Validation accuracy</span><strong>77.0%</strong></div>
+        <div class="fact"><span>Validation macro F1</span><strong>0.7631</strong></div>
+        <div class="fact"><span>Validation images</span><strong>200</strong></div>
+        <div class="fact"><span>Classes</span><strong>7</strong></div>
+      </section>
+
+      <section class="panel">
+        <h2>Overview</h2>
+        <p>
+          Developed as a three-person academic project, this classifier distinguishes seven lizard
+          species. The work covered data preparation, transfer learning, fine-tuning and
+          evaluation, with particular attention to differences in performance between visually
+          similar classes.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Approach</h2>
+        <p>
+          We used an ImageNet-pretrained EfficientNetV2S backbone and 224 × 224 input images.
+          Training began with a frozen backbone, followed by fine-tuning of upper layers. Data
+          augmentation included flipping, rotation, zoom, translation and contrast adjustments. The
+          final workflow also generated submission predictions using original and horizontally
+          flipped images.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Evaluation</h2>
+        <p>
+          The dataset contained 1,334 labelled images, split into 1,134 training images and 200
+          validation images. The final model achieved 77.0% validation accuracy and a macro F1
+          score of 0.7631. A confusion matrix and per-class precision, recall and F1 scores helped
+          identify which species remained difficult to distinguish.
+        </p>
+        <p class="result-note">
+          All figures are measured on our held-out validation images. They are not a Kaggle
+          leaderboard score or a production accuracy. The validation set came from a random
+          shuffled split of the labelled training data.
+        </p>
+        <div class="diagram-grid diagram-grid-single">
+          <figure class="diagram-card">
+            <figcaption>Confusion matrix on the 200 validation images</figcaption>
+            <a
+              class="diagram-link diagram-link-tall"
+              href="assets/images/lizard/confusion-matrix.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the confusion matrix in full size"
+            >
+              <img
+                src="assets/images/lizard/confusion-matrix.png"
+                alt="Confusion matrix for the seven lizard classes. Most images fall on the diagonal; Green anole is most often confused with Brown anole and Cuban knight anole."
+                width="755"
+                height="636"
+                loading="lazy"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+
+          <figure class="diagram-card">
+            <figcaption>
+              Loss and accuracy over all epochs. The dashed line separates Phase 1 (frozen
+              backbone) from Phase 2 (fine-tuning).
+            </figcaption>
+            <a
+              class="diagram-link diagram-link-auto"
+              href="assets/images/lizard/training-curves.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the training curves in full size"
+            >
+              <img
+                src="assets/images/lizard/training-curves.png"
+                alt="Training and validation loss and accuracy curves. A dashed vertical line marks the switch from Phase 1 to Phase 2. Training accuracy keeps rising in Phase 2 while validation accuracy stays between roughly 70% and 77%."
+                width="1290"
+                height="440"
+                loading="lazy"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Per-class results</h2>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="sr-only">Precision, recall and F1 score per class on the validation set</caption>
+            <thead>
+              <tr><th scope="col">Species</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Images</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Black spiny-tailed iguana</th><td>0.806</td><td>0.833</td><td>0.820</td><td>30</td></tr>
+              <tr><th scope="row">Brown anole</th><td>0.708</td><td>0.680</td><td>0.694</td><td>25</td></tr>
+              <tr><th scope="row">Cuban knight anole</th><td>0.667</td><td>0.846</td><td>0.746</td><td>26</td></tr>
+              <tr><th scope="row">Desert iguana</th><td>0.969</td><td>0.969</td><td>0.969</td><td>32</td></tr>
+              <tr><th scope="row">Green anole</th><td>0.800</td><td>0.552</td><td>0.653</td><td>29</td></tr>
+              <tr><th scope="row">Green iguana</th><td>0.636</td><td>0.750</td><td>0.689</td><td>28</td></tr>
+              <tr><th scope="row">Lesser Antillean iguana</th><td>0.815</td><td>0.733</td><td>0.772</td><td>30</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>What the results show</h2>
+        <p>
+          Performance varied by class: Desert iguana reached an F1 score of 0.969, while Green
+          anole reached 0.653. This highlighted the importance of examining class-level errors
+          alongside overall accuracy.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Limitations</h2>
+        <ul class="clean-list">
+          <li>The 200 validation images are a small sample, so each class has only 25 to 32 examples and the scores carry noticeable uncertainty.</li>
+          <li>In Phase 2 training accuracy kept climbing while validation accuracy stayed around 70–77%, a sign of overfitting that stronger regularisation or more data would need to address.</li>
+          <li>The training photos are not included on this site because I do not know their sharing rights, and there is no public repository or live demo for this project.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Role &amp; Scope</h2>
+        <p>
+          A team project with José Gutiérrez Montero, Mateo Donado González and me. I contributed
+          to model development and evaluation as part of the team.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

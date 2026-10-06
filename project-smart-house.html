@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | Smart House</title>
+    <meta
+      name="description"
+      content="Smart House — a connected IoT prototype combining face recognition, sensors and actuators over MQTT."
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="page-hero">
+        <p class="section-kicker">Computer Vision · IoT · Team Project</p>
+        <h1>Smart House: Computer Vision &amp; IoT</h1>
+        <p>
+          A connected smart-house prototype combining camera-based face recognition with sensors
+          and actuators. I implemented the face-recognition feature and coordinated team
+          integration, helping connect recognised users to personalised room settings.
+        </p>
+        <p class="subheading">
+          <a class="btn" href="https://www.youtube.com/watch?v=HaJNWG6RLSw" target="_blank" rel="noopener noreferrer">Watch the Demo Video</a>
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Python</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">face_recognition</span>
+          <span class="chip">MQTT</span>
+          <span class="chip">Orange Pi</span>
+          <span class="chip">Raspberry Pi Pico</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Overview</h2>
+        <p>
+          Our team built a smart-house prototype integrating camera input, environmental sensors
+          and automated actions. Recognised users could trigger personalised room settings,
+          including music and target temperature.
+        </p>
+        <div class="diagram-grid diagram-grid-single">
+          <figure class="diagram-card">
+            <figcaption>The physical prototype, with the electronics in the attic and the rooms below</figcaption>
+            <a
+              class="diagram-link diagram-link-tall"
+              href="assets/images/smart-house-prototype.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the smart-house prototype photo in full size"
+            >
+              <img
+                src="assets/images/smart-house-prototype.jpg"
+                alt="Cardboard and wood model house with the front opened. A webcam and wiring sit in the attic, curtains hang in the upper room and small toy furniture fills the rooms."
+                width="950"
+                height="1266"
+                loading="lazy"
+              />
+              <span class="diagram-zoom">Open Full Size</span>
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>My contribution</h2>
+        <p>
+          I implemented the face-recognition feature using Python, OpenCV and the face_recognition
+          library. As team leader, I coordinated integration and contributed to testing individual
+          modules and the combined system.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>System integration</h2>
+        <p>
+          The wider prototype connected sensors and actuators through MQTT and microcontroller-based
+          components. Other team features included licence-plate recognition for the garage and
+          environmental monitoring. Testing covered individual components before integration into
+          the complete prototype.
+        </p>
+        <p style="margin-top:0.85rem;">
+          The garage feature reads licence plates with Tesseract OCR. That part was built by other
+          members of the team.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Scope &amp; limitations</h2>
+        <ul class="clean-list">
+          <li>This is a school prototype on a model house, not a deployed home system.</li>
+          <li>No accuracy figure was measured for face recognition, so none is claimed here.</li>
+          <li>The prototype was built by a team of four, and I did not build all of its hardware or software.</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

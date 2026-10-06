@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehmet | Endangered Animal Recognition</title>
+    <meta
+      name="description"
+      content="Endangered Animal Recognition — a Streamlit app that classifies camera frames with Keras and logs predictions to an analytics dashboard."
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #060b16;
+        color: #e8f1ff;
+      }
+      .page-section > section {
+        margin-bottom: 1.2rem;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html">Mehmet</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-section">
+      <section class="page-hero">
+        <p class="section-kicker">Computer Vision · Data Visualisation · Team Project</p>
+        <h1>Endangered Animal Recognition</h1>
+        <p>
+          A camera-based species classification application built with Python, OpenCV, Keras and
+          Streamlit, combining confidence-based filtering with timestamped prediction logs and an
+          analytics dashboard.
+        </p>
+        <p class="subheading">
+          <a class="btn" href="https://github.com/mhmtgrmz12/Discovery-Week-Group-3-Endangered-Species-" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Technology Stack</h2>
+        <div class="chip-wrap" style="margin-top:0.7rem;">
+          <span class="chip">Python</span>
+          <span class="chip">OpenCV</span>
+          <span class="chip">Keras</span>
+          <span class="chip">Streamlit</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">Plotly</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Overview</h2>
+        <p>
+          This team project connects camera input to an image classifier and presents predictions
+          through a Streamlit interface. It records timestamped species predictions and confidence
+          values for later analysis.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>How it works</h2>
+        <p>
+          Frames are resized to 224 × 224 pixels and normalised before Keras inference. Confidence
+          filtering determines which predictions are logged, while a cooldown limits repeated
+          entries for the same species. A dashboard summarises recorded observations using Pandas
+          and Plotly.
+        </p>
+        <figure class="flow-figure">
+          <figcaption>System workflow (diagram, not a screenshot of the running app)</figcaption>
+          <ol class="flow" aria-label="System workflow">
+            <li>Camera</li>
+            <li>Preprocessing</li>
+            <li>Keras classifier</li>
+            <li>Confidence filter</li>
+            <li>Prediction log</li>
+            <li>Dashboard</li>
+          </ol>
+        </figure>
+      </section>
+
+      <section class="panel">
+        <h2>Scope</h2>
+        <p>
+          The application classifies the image as a whole. It does not provide bounding-box object
+          detection or verified multi-animal tracking. Model confidence controls logging; it is not
+          a measured test-accuracy score.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Role &amp; Scope</h2>
+        <p>
+          A team project in which I contributed to the team&rsquo;s camera-based classification
+          application. The classifier is a pre-trained Keras model that the app loads.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="projects.html">Back to Projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Mehmet. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
